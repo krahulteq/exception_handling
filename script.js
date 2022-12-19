@@ -8,13 +8,14 @@ $(document).ready(function () {
             success: function (response) {
                 var json = $.parseJSON(response);
                 if (json.status == false) {
-                    $('.invalid').html('');
+                    $('.invalid').show();
                     $('.valid').hide();
+                    $('.invalid').html('');
                     $('.invalid').append(response);
                 } else {
                     $('.valid').show();
-                    $('.valid').html('');
                     $('.invalid').hide();
+                    $('.valid').html('');
                     $('.valid').append(response);
                 }
             }
